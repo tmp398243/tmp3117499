@@ -1,5 +1,5 @@
 using Pkg: Pkg
-using PKGNAME
+using ConfigurationsJUDI
 using Test
 using TestReports
 using Aqua
@@ -7,28 +7,28 @@ using Documenter
 
 ts = @testset ReportingTestSet "" begin
     @testset "Code quality (Aqua.jl)" begin
-        Aqua.test_all(PKGNAME; ambiguities=false)
-        Aqua.test_ambiguities(PKGNAME)
+        Aqua.test_all(ConfigurationsJUDI; ambiguities=false)
+        Aqua.test_ambiguities(ConfigurationsJUDI)
     end
 
     include("test_pkg_stuff.jl")
 
     # Set metadata for doctests.
-    DocMeta.setdocmeta!(PKGNAME, :DocTestSetup, :(using PKGNAME, Test); recursive=true)
-    if PKGNAME.HAS_NATIVE_EXTENSIONS
+    DocMeta.setdocmeta!(ConfigurationsJUDI, :DocTestSetup, :(using ConfigurationsJUDI, Test); recursive=true)
+    if ConfigurationsJUDI.HAS_NATIVE_EXTENSIONS
         using Random
         DocMeta.setdocmeta!(
-            PKGNAME.get_extension(PKGNAME, :RandomExt),
+            ConfigurationsJUDI.get_extension(ConfigurationsJUDI, :RandomExt),
             :DocTestSetup,
-            :(using PKGNAME, Test);
+            :(using ConfigurationsJUDI, Test);
             recursive=true,
         )
     end
 
     # Run doctests.
-    doctest(PKGNAME; manual=true)
-    if PKGNAME.HAS_NATIVE_EXTENSIONS
-        doctest(PKGNAME.get_extension(PKGNAME, :RandomExt); manual=true)
+    doctest(ConfigurationsJUDI; manual=true)
+    if ConfigurationsJUDI.HAS_NATIVE_EXTENSIONS
+        doctest(ConfigurationsJUDI.get_extension(ConfigurationsJUDI, :RandomExt); manual=true)
     end
 
     # Run examples.

@@ -1,7 +1,7 @@
 using Pkg: Pkg
-using PKGNAME
+using ConfigurationsJUDI
 using Documenter
-using Random # Loads PKGNAME Random extension.
+using Random # Loads ConfigurationsJUDI Random extension.
 
 using Literate
 
@@ -89,30 +89,30 @@ for (ex, pth) in examples
 end
 
 # Set metadata for doctests.
-DocMeta.setdocmeta!(PKGNAME, :DocTestSetup, :(using PKGNAME, Test); recursive=true)
-if PKGNAME.HAS_NATIVE_EXTENSIONS
+DocMeta.setdocmeta!(ConfigurationsJUDI, :DocTestSetup, :(using ConfigurationsJUDI, Test); recursive=true)
+if ConfigurationsJUDI.HAS_NATIVE_EXTENSIONS
     using Random
     DocMeta.setdocmeta!(
-        PKGNAME.get_extension(PKGNAME, :RandomExt),
+        ConfigurationsJUDI.get_extension(ConfigurationsJUDI, :RandomExt),
         :DocTestSetup,
-        :(using PKGNAME, Test);
+        :(using ConfigurationsJUDI, Test);
         recursive=true,
     )
 end
 makedocs(;
-    modules=[PKGNAME, PKGNAME.get_extension(PKGNAME, :RandomExt)],
+    modules=[ConfigurationsJUDI, ConfigurationsJUDI.get_extension(ConfigurationsJUDI, :RandomExt)],
     authors="Grant Bruer gbruer15@gmail.com and contributors",
-    sitename="PKGNAME.jl",
+    sitename="ConfigurationsJUDI.jl",
     source=DOC_STAGE,
     build=DOC_BUILD,
     format=Documenter.HTML(;
-        repolink="https://github.com/gbruer15/PKGNAME.jl",
-        canonical="https://gbruer15.github.io/PKGNAME.jl",
+        repolink="https://github.com/tmp398243/tmp3117499",
+        canonical="https://tmp398243.github.io/tmp3117499",
         edit_link="main",
         assets=String[],
         size_threshold=2 * 2^20,
     ),
-    repo="github.com/gbruer15/PKGNAME.jl",
+    repo="github.com/tmp398243/tmp3117499",
     pages=[
         "Home" => "index.md",
         "Examples" => examples_markdown,

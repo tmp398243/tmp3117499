@@ -1,5 +1,5 @@
-name = "PKGNAME"
-uuid = "00000000-0000-0000-0000-123456789010"
+name = "ConfigurationsJUDI"
+uuid = "2c8b6cec-2da9-47bf-8bb4-83702df661de"
 authors = ["Grant Bruer gbruer15@gmail.com and contributors"]
 version = "1.0.0-DEV"
 

@@ -1,27 +1,27 @@
 ```@meta
-CurrentModule = PKGNAME
+CurrentModule = ConfigurationsJUDI
 ```
 
-# PKGNAME
+# ConfigurationsJUDI
 
-Documentation for [PKGNAME](https://github.com/gbruer15/PKGNAME.jl).
+Documentation for [ConfigurationsJUDI](https://github.com/tmp398243/tmp3117499).
 
 
 ```@index
-Modules = [PKGNAME]
+Modules = [ConfigurationsJUDI]
 ```
 
 ```@autodocs
-Modules = [PKGNAME]
+Modules = [ConfigurationsJUDI]
 ```
 
 
 # Extensions
 
 ```@index
-Modules = [PKGNAME.get_extension(PKGNAME, :RandomExt)]
+Modules = [ConfigurationsJUDI.get_extension(ConfigurationsJUDI, :RandomExt)]
 ```
 
 ```@autodocs
-Modules = [PKGNAME.get_extension(PKGNAME, :RandomExt)]
+Modules = [ConfigurationsJUDI.get_extension(ConfigurationsJUDI, :RandomExt)]
 ```
