@@ -14,7 +14,9 @@ ts = @testset ReportingTestSet "" begin
     include("test_pkg_stuff.jl")
 
     # Set metadata for doctests.
-    DocMeta.setdocmeta!(ConfigurationsJUDI, :DocTestSetup, :(using ConfigurationsJUDI, Test); recursive=true)
+    DocMeta.setdocmeta!(
+        ConfigurationsJUDI, :DocTestSetup, :(using ConfigurationsJUDI, Test); recursive=true
+    )
     if ConfigurationsJUDI.HAS_NATIVE_EXTENSIONS
         using Random
         DocMeta.setdocmeta!(
@@ -28,7 +30,9 @@ ts = @testset ReportingTestSet "" begin
     # Run doctests.
     doctest(ConfigurationsJUDI; manual=true)
     if ConfigurationsJUDI.HAS_NATIVE_EXTENSIONS
-        doctest(ConfigurationsJUDI.get_extension(ConfigurationsJUDI, :RandomExt); manual=true)
+        doctest(
+            ConfigurationsJUDI.get_extension(ConfigurationsJUDI, :RandomExt); manual=true
+        )
     end
 
     # Run examples.
