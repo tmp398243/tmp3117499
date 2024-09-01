@@ -89,7 +89,9 @@ for (ex, pth) in examples
 end
 
 # Set metadata for doctests.
-DocMeta.setdocmeta!(ConfigurationsJUDI, :DocTestSetup, :(using ConfigurationsJUDI, Test); recursive=true)
+DocMeta.setdocmeta!(
+    ConfigurationsJUDI, :DocTestSetup, :(using ConfigurationsJUDI, Test); recursive=true
+)
 if ConfigurationsJUDI.HAS_NATIVE_EXTENSIONS
     using Random
     DocMeta.setdocmeta!(
@@ -100,7 +102,9 @@ if ConfigurationsJUDI.HAS_NATIVE_EXTENSIONS
     )
 end
 makedocs(;
-    modules=[ConfigurationsJUDI, ConfigurationsJUDI.get_extension(ConfigurationsJUDI, :RandomExt)],
+    modules=[
+        ConfigurationsJUDI, ConfigurationsJUDI.get_extension(ConfigurationsJUDI, :RandomExt)
+    ],
     authors="Grant Bruer gbruer15@gmail.com and contributors",
     sitename="ConfigurationsJUDI.jl",
     source=DOC_STAGE,
